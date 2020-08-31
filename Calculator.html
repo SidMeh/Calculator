@@ -1,0 +1,145 @@
+s<html>
+<head>
+<title>Calculator</title>
+<script type = "text/javascript">
+function sine() 
+ {var a = Number(document.getElementById("theta").value);
+ a = a * 3.141 /180;
+  var b = a - (a*a*a)/6 + (a*a*a*a*a)/120 - (a*a*a*a*a*a*a)/5040;
+  document.myform.sin.value = b;
+  return;
+  }
+function cosine()
+{var c = Number(document.getElementById("theta").value);
+ c = c * 3.141 /180;
+var d = 1 - (c*c)/2 + (c*c*c*c)/24 - (c*c*c*c*c*c)/720 ;
+document.myform.cos.value = d;
+return;
+}
+function tangent()
+{ var e = Number(document.getElementById("theta").value);
+if(e == 90 || e == -90)
+{ document.myform.tan.value = "not defined";
+ return;
+}  
+e = e * 3.141 /180;
+
+var e1 = e + (e*e*e)/3 + 2*(e*e*e*e*e)/15;
+ document.myform.tan.value = e1;
+return;
+}
+ function secant()
+{var c = Number(document.getElementById("theta").value);
+if(c == 90 || c == -90)
+{ document.myform.sec.value = "not defined";
+ return; 
+}
+c = c * 3.141 /180;
+var d = 1 - (c*c)/2 + (c*c*c*c)/24 - (c*c*c*c*c*c)/720 ;
+document.myform.sec.value = 1/d;
+return;
+}
+function cosecant() 
+ {var a = Number(document.getElementById("theta").value);
+if(a == 0)
+{ document.myform.cosec.value = "not defined";
+ return; 
+} 
+a = a * 3.141 /180;
+  var b = a - (a*a*a)/6 + (a*a*a*a*a)/120 - (a*a*a*a*a*a*a)/5040;
+  document.myform.cosec.value = 1/b;
+  return;
+  }
+function cotangent()
+{ var e = Number(document.getElementById("theta").value);
+if(e == 90 || e == -90)
+{ document.myform.cot.value = 0;
+ return;
+}  
+if(e == 0)
+{ document.myform.cot.value = "not defined";
+ return;
+}  
+e = e * 3.141 /180;
+
+var e1 = e + (e*e*e)/3 + 2*(e*e*e*e*e)/15;
+ document.myform.cot.value = 1/e1;
+return;
+}
+function log()
+{ var x = Number(document.getElementById("theta").value);
+ if(x == 0 || x < 0)
+{document.myform.logarithm.value = "not defined";
+return; 
+}
+var y = (x-1)/(x+1)/(x+1)*2 + (x-1)/(x+1)/(x+1)/(x+1)/3 + (x-1)/(x+1)/(x+1)/(x+1)/(x+1)/4 ;
+ document.myform.logarithm.value = y;
+return;
+}
+
+
+</script>
+<style type = "text/css">
+p1{
+     background-color : #ccc;
+     margin : 1em;
+     padding : 1em;}
+
+p2{border-style : dashed;
+     border-width : 3px;
+     border-color : green;}
+
+a:link{color : blue}
+a:visited{color : purple}
+a:hover{color : voilet}
+a:active{color : red}
+
+</style>
+</head>
+<body>
+<p style = "color : blue;font-family : arial;font-size : 1cm;text-transformation : uppercase;letter-spacing;letterspacing : 0.5em;word-spacing:3em;line-height :1.5;text-align : center;">This is my website</p>
+
+<p1>Now lets code together as coding is fun. Do you enjoy coding ? I also enjoy coding. Then lets code together!<p1>
+<br>
+<br>
+<p2>python is a basic language every one should be able to code with.</p2>
+<br>
+<br>
+<a href = "https://www.youtube.com"target = "_blank" style = "background-color : blue; cursor : wait;">Youtube</a>
+
+
+
+
+
+
+
+
+
+<p>This is a calculator</p>
+<form name = "myform">
+<input type = "number" id = "theta"/><br>
+<input type = "text"  name = "sin" />
+<input type = "button" value = "get sine" onclick = "sine()"/><br>
+<input type = "text" name = "cos"/>
+<input type = "button" value = "get cosine" onclick = "cosine()"/><br>
+<input type = "text" name = "tan"/>
+<input type = "button" value = "get tangent" onclick = "tangent()"/><br>
+<input type = "text" name = "sec"/>
+<input type = "button" value = "get secant" onclick = "secant()"/><br>
+<input type = "text" name = "cosec"/>
+<input type = "button" value = "get cosecant" onclick = "cosecant()"/><br>
+<input type = "text" name = "cot"/>
+<input type = "button" value = "get cotangent" onclick = "cotangent()"/><br>
+<input type = "number" name = "logarithm"/>
+<input type = "button" value = "get logarithm" onclick = "log()"/><br>
+<audio controls = "controls" height = "100px" width = "200px">
+<source src = "Maid_with_the_Flaxen_Hair.mp3" type = "audio/mp3"/>
+
+</form>
+
+
+</body>
+</html>
+
+
+ 
